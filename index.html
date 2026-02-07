@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASH NO PIX | Pagamento Confirmado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-green: #39FF14;
+            --dark-bg: #050505;
+            --text-white: #ffffff;
+            --text-gray: #a0a0a0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Efeito de Glow no fundo */
+        .glow-sphere {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: var(--neon-green);
+            filter: blur(150px);
+            opacity: 0.15;
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(57, 255, 20, 0.1);
+            border: 2px solid var(--neon-green);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 30px;
+            box-shadow: 0 0 25px rgba(57, 255, 20, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 20px rgba(57, 255, 20, 0.3); }
+            50% { transform: scale(1.05); box-shadow: 0 0 40px rgba(57, 255, 20, 0.5); }
+            100% { transform: scale(1); box-shadow: 0 0 20px rgba(57, 255, 20, 0.3); }
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        span.neon-text {
+            color: var(--neon-green);
+            text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+        }
+
+        p.subtitle {
+            color: var(--text-gray);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+
+        .btn-main {
+            display: block;
+            background: var(--neon-green);
+            color: #000;
+            text-decoration: none;
+            font-weight: 900;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(57, 255, 20, 0.4);
+        }
+
+        .btn-support {
+            display: inline-block;
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .btn-support:hover {
+            color: var(--neon-green);
+            border-bottom: 1px solid var(--neon-green);
+        }
+
+        .footer-note {
+            margin-top: 50px;
+            font-size: 0.7rem;
+            color: #333;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glow-sphere"></div>
+
+    <div class="container">
+        <div class="success-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+
+        <h1>PAGAMENTO <span class="neon-text">APROVADO!</span></h1>
+        <p class="subtitle">Obrigado pela sua compra no <b>CASH NO PIX</b>!<br>O seu acesso foi confirmado com sucesso.</p>
+
+
+        <div class="footer-note">
+            CASH NO PIX &copy; 2026 - SEGURANÇA CRIPTOGRAFADA
+        </div>
+    </div>
+
+</body>
+</html>
